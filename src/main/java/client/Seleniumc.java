@@ -22,7 +22,7 @@ public class Seleniumc {
 		File screenshotFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshotFile, new File(path +"screenshot.png"));
 		driver.quit();
-		driver.close();
+		
 	}
 
 
