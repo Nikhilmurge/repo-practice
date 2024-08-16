@@ -19,10 +19,12 @@ public class Seleniumc {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.saucedemo.com/");
+		Thread.sleep(2000);
 		File screenshotFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshotFile, new File(path +"screenshot.png"));
 		driver.quit();
-		
+		driver.close();
+	
 	}
 
 
